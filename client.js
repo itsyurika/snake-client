@@ -16,28 +16,19 @@ const connect = function() {
 
   conn.on('connect', () => {
     console.log("Successfully connected to the server");
-    // setTimeout(()=> {conn.write("Name: YAYA")})
     conn.write("Name: YAY");
-    setTimeout(() => {
-      conn.write("Move: up");
-      setTimeout(() => {
-        conn.write("Move: up");
-        setTimeout(() => {
-          conn.write("Move: up");
-        }, 50);
-      }, 50);
-    }, 50);
+    // 
+    // setTimeout(() => {
+    //   conn.write("Move: up");
+    //   setTimeout(() => {
+    //     conn.write("Move: up");
+    //     setTimeout(() => {
+    //       conn.write("Move: up");
+    //     }, 50);
+    //   }, 50);
+    // }, 50);
   });
 
-  // conn.on('connect' () => {
-  //   setTimeout(() => { 
-  //     conn.write("Move: up");
-  //     setTimeout(() => { conn.write("Move: up");, 150; });
-
-  //   , 50; });
-  //   setTimeout(() => { conn.write("Move: up"), 250; });
-  //   setTimeout(() => { conn.write("Move: up"), 350; });
-  // });
   return conn;
 };
 
