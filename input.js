@@ -1,5 +1,3 @@
-
-const { connect } = require('./client');
 let connection;
 // setup interface to handle user input from stdin
 const handleUserInput = function(key) {
@@ -19,7 +17,12 @@ const handleUserInput = function(key) {
   if (key === 'd') {
     connection.write("Move: right");
   }
-  // conn.write("Move:")
+  if (key === 'h') {
+    connection.write("Say: SUP!");
+  }
+  if (key === 'b') {
+    connection.write("Say: BYE!");
+  }
 };
 
 const setupInput = function(conn) {
